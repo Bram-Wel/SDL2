@@ -1,0 +1,23 @@
+#ifndef _DEMO_H_
+#define _DEMO_H_
+
+#include <SDL2/SDL.h>
+
+/**
+ * struct SDL_Instance - Holds addresses of the window and renderer
+ *
+ * @window: Window address
+ * @renderer: Renderer address
+ */
+typedef struct SDL_Instance
+{
+	SDL_Window *window;
+	SDL_Renderer *renderer;
+} SDL_Instance;
+
+int init_instance(SDL_Instance *);
+void draw_stuff(SDL_Instance);
+int poll_events(void);
+void _quit(SDL_Instance *instance);
+
+#endif /*_DEMO_H_*/
